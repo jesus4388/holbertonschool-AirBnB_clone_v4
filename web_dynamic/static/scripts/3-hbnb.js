@@ -31,9 +31,8 @@ $(document).ready(function () {
    });
   };
   getstatus()
-});
-
-$.ajax({
+  
+  $.ajax({
     type: 'POST',
     url: 'http://0.0.0.0:5001/api/v1/places_search',
     data: '{}',
@@ -47,3 +46,7 @@ $.ajax({
     }
   });
 });
+  
+});
+
+
