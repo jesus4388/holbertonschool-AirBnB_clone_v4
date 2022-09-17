@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const dict = {};
+const dict = {};
   $('input:checkbox').change(function () {
     if (this.checked) {
       dict[$(this).attr('data-id')] = $(this).attr('data-name');
@@ -19,9 +19,9 @@ $(document).ready(function () {
       count--;
     }
   });
-  const Url='http://0.0.0.0:5001/api/v1/status';
+const Url='http://0.0.0.0:5001/api/v1/status';
   
-  function getstatus() {
+function getstatus() {
     $.get(Url, function(data, textStatus) {
       if (data) {
         $('#api_status').addClass("available");
@@ -31,8 +31,7 @@ $(document).ready(function () {
    });
   };
   getstatus()
-});
-
+  
 $.ajax({
     type: 'POST',
     url: 'http://0.0.0.0:5001/api/v1/places_search',
@@ -65,3 +64,6 @@ $('.filters > button').click(function () {
     });
   });
 });
+  
+});
+
